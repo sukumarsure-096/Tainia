@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    {% block title %}
+    <title>Hello, world!</title>
+    {% endblock %}
+    <style>
+        .mainbody{
+          background: linear-gradient(135deg,darkred,darkslategrey);
+        }
+        .up{
+          background: linear-gradient(45deg,red,orange);
+          color: black;width: 30%;margin-left: 200px;margin-top: 50px;
+        }
+        .up input[type='submit']{
+          background: linear-gradient(45deg,grey,black);color: ivory;padding: 10px;border: 3px solid black;border-radius: 10px 0 10px 0px;
+          margin-left: 35%;
+
+        }
+     
+        .movie img{
+            height: 150px;width: 170px;border-radius: 20px;border: 2px solid black; box-shadow: 0 0 10px black;
+               
+        }
+        .movie figure{
+          display: inline-block;padding: 15px;}
+
+        h4 a{
+          padding:10px;
+          color: blanchedalmond;
+        
+        }
+
+        .carousel-inner{
+          border: 3px solid black;
+          border-radius: 20px;
+          box-shadow: 0 0 10px black;
+          margin-bottom: 5px;
+        }       
+        a:hover{
+          text-decoration: none;
+        }
+        .navbar{
+          background: linear-gradient(45deg,darkslategrey,coral);
+          border-radius: 5px;
+          margin-bottom: 5px;
+          }
+        .username{
+          margin-left: 30px;
+        }
+        ul li{
+          color: blanchedalmond;
+        }
+        .nav .navbar-brand {
+          color:whitesmoke;
+          margin-left: 20px;padding: 10px;
+        }
+        .nav .dropdown .btn{
+          padding: 10px;color: whitesmoke;margin-left: 20px;font-size: 20px;
+        }
+        .dropdown-menu a{
+          color: black;
+          margin-left: 0px;}
+        .dropdown-menu .detail{
+          margin-left: 5px;
+        }
+        .dropdown-menu a:hover{
+          background: none;
+        }
+        .dropdown-menu .im a{
+          color: black;
+          border: 2px solid black; margin-left: 5px;border-radius: 5px;
+        }
+        .nav-link{
+          font-size: 20px;
+        }
+
+        .im i{
+          width: 20px; height: 20px;
+        } 
+        .img{
+            background: linear-gradient(80deg,red,black);
+            margin-top: 150px;padding: 30px;margin-left: 50px;color: cornflowerblue;
+            width: 25%;
+        }
+      </style>
+  
+  </head>
+  <body>
+    <nav class="nav">
+    </nav>
+        {% block body_block %}
+      
+
+        {% endblock %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change password</title>
+    <style>
+    body{
+        margin: 150px 0 0 350px;
+        
+    }
+    .fancy{
+        background: linear-gradient(45deg,darkred,black);
+        padding: 10px;color: whitesmoke;
+        width: 25%;border-radius: 25px; box-shadow: 0 0 10px black;
+        }
+    .fancy label{
+        margin-left: 10px;
+    }
+   .fancy input[type='password'],.fancy input[type='text']{
+        outline: none;border: none;background: transparent;
+        border-bottom: 2px solid white;color: whitesmoke;
+        margin:10px 0 10px 10px;
+    }
+    .fancy input[type='submit']{
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 20px 0 20px 0;
+        background: linear-gradient(45deg,darkred,grey);
+        color: whitesmoke;
+        margin: 5px;width: 200px;margin-left: 20px;outline: none;
+    }
+
+</style>
+</head>
+<body>
+    <div class="fancy">
+        <form  method="POST">
+            {% csrf_token %}
+                <h1>change password</h1>
+                
+            <label for="username">User name</label><br>
+            <input type="text" name="username" id="username">
+            <label for="password">Password</label><br>
+            <input type="password" name="password" id="password" placeholder="enter new password">
+            <input type="submit" value="submit">
+        
+        </form>
+        </div>
+</body>
+</html>

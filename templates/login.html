@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        body{
+            margin: 150px 0 0 350px;
+            
+        }
+        .fancy{
+            background: linear-gradient(45deg,darkred,black);
+            padding: 10px;color: whitesmoke;
+            width: 25%;border-radius: 25px; box-shadow: 0 0 10px black;
+            }
+        .fancy .label,.fancy .res{
+            padding: 10px;
+        }
+        .fancy .res a{
+            text-decoration: none;color: whitesmoke;
+        }
+       .input input[type='text'],.input input[type='password']{
+            outline: none;border: none;background: transparent;
+            border-bottom: 2px solid white;color: whitesmoke;
+            margin-left: 10px;
+        }
+        .submit input[type='submit']{
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 20px 0 20px 0;
+            background: linear-gradient(45deg,darkred,grey);
+            color: whitesmoke;
+            margin: 5px;width: 200px;margin-left: 20px;outline: none;
+        }
+
+    </style>
+    
+</head>
+ <body>
+    <div class="fancy">
+    <form method="POST">
+        {% csrf_token %}
+    
+    <div class='label'><label for="name">User name</label></div>
+
+    <div class="input"><input type="text" name="name" id="name" ></div>
+
+    <div class='label'><label for="password">Password</label> </div>
+
+    <div class="input"><input type="password" name="password" id="password"></div>
+
+    <div class="res"><a href="{% url 'reset' %}"><label for="Forgot password">Forgot password</label></a> </div>
+
+    <div class='submit'><input type="submit" value="Login"> </div>
+
+</form>
+<div class='submit'><a href="{% url 'signup' %}"> <input type="submit" value="Signup"></a></div>
+
+</div>
+
+</body>
+</html>
+  
+

@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    <title>Home</title>
+
+{% endblock %}
+
+
+{% block body_block %}
+<div class='mainbody'>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="username">
+          {{user.username}}</div>
+          <a class="dropdown-item" href="{% url 'cp' %}">Change password</a>
+          <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="{% url 'Log_out' %}">Logout</a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i1.wp.com/www.socialnews.xyz/wp-content/uploads/2020/02/03/allu-arjun-s-Ala-Vaikunthapurramuloo-movie-latest-All-Time-Telugu-Film-Non-Baahubali-industry-hit-Poster-.jpg?quality=90&zoom=1&ssl=1.jpg" class="d-block w-100" alt="..." width='150px' height="450px">
+    </div>
+    <div class="carousel-item">
+      <img src="https://static.toiimg.com/photo/msid-76241911/76241911.jpg?714971.jpg" class="d-block w-100" alt="" width='150px' height="450px">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/04/27/817597-avengers-endgame.jpg" class="d-block w-100" alt="..." width='150px' height="450px">
+    </div>
+    <div class="carousel-item">
+      <img src="https://english.mathrubhumi.com/polopoly_fs/1.4675470.1586324787!/image/image.jpg_gen/derivatives/landscape_894_577/image.jpg" class="d-block w-100" alt="..." width='150px' height="450px">
+    </div>
+    <div class="carousel-item">
+      <img src="https://files.prokerala.com/movies/pics/800/saaho-malayalam-106797.jpg" class="d-block w-100" alt="..." width='150px' height="450px">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<h4><a href="{% url 'tm' %}">Telugu Movies</a></h4>
+<div class="movie">
+  <figure>
+    <a href="https://www.youtube.com/watch?v=uyiuYfSAc-A">
+    <img src="https://f7b4p3f8.stackpathcdn.com/wp-content/uploads/2020/02/Bheesma-latest-poster.jpg"></a>
+  </figure>
+  <figure><a href="https://www.youtube.com/watch?v=MPTWp2wCJ-g">
+    <img src="https://www.telugunestam.com/gallery/events/posters/Nannu%20Dochukunduvate%20Telugu%20Movie%20Posters/69219545Nannu-Dochukunduvate-latest-photos-(2).jpg"></a>
+  </figure>
+  <figure><a href="https://www.youtube.com/watch?v=z1wzEiCOKnI">
+    <img src="https://1.bp.blogspot.com/-ZjF4JbQgIzI/UbIglzXet4I/AAAAAAAA7vQ/_KfM7L1X7tA/s1600/Action+3D+Movie+Wallpapers++Telugucinemas.in+(1).jpg">
+  </a></figure>
+  <figure><a href="https://www.youtube.com/watch?v=LcC5A7Fcnkw">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRgRe47GkQCeYNCXFd3FpJBNoASfLIC38NlXA&usqp=CAU.jpg">
+  </a></figure>
+  <figure><a href="https://www.youtube.com/watch?v=ztWcdGn5thU">
+    <img src="https://3.bp.blogspot.com/-XslztJ3_21s/WJYnYrKIs0I/AAAAAAAAGlU/ly1s6NhFvL0tPHapMa2qdPOw8-cSpuDzQCLcB/s1600/Gopichand%2B_landing-gautamnanda.jpg">
+  </a></figure>
+  <figure> <a href='https://www.youtube.com/watch?v=dzj0FoaUrFE'>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0FWAGT5Vb_gie8WIamnedk5R4lYDlTGvptQ&usqp=CAU.jpg">
+  </a></figure>
+  <h4><a href="{% url 'tm' %}">English Movies</a></h4>
+  <figure>
+    <img src="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422.jpg">
+  </figure>
+  <figure>
+    <img src="https://cdn.shopify.com/s/files/1/0969/9128/products/Joker_-_Put_On_A_Happy_Face_-_Joaquin_Phoenix_-_Hollywood_English_Movie_Poster_3_6638bb69-f147-41f4-a36a-3991db7ad026.jpg?v=1579504990.jpg">
+   </figure>
+  <figure>
+    <img src="https://i.pinimg.com/474x/e2/a7/91/e2a7910a010b94bdcb5b23550f41cad4.jpg">
+  </figure>
+  <figure>
+    <img src="https://www.boredart.com//wp-content/uploads/2015/01/famous-movie-posters-of-All-time-Hollywood-32.jpg">
+  </figure>
+  <figure>
+    <img src="https://cdn1.thr.com/sites/default/files/imagecache/gallery_portrait_500X751/2011/11/attack_4c.jpg">
+  </figure>
+  <figure>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQu89xFC0lL7Vem_5nvT1e3DCVksZ6sGbOm6w&usqp=CAU.jpg">
+  </figure>
+  <h4><a href="{% url 'tm' %}">Hindi Movies</a></h4>
+  <figure>
+    <img src="https://static2.showtimes.com/poster/660x980/baahubali-2-the-conclusion-hindi-111259.jpg">
+  </figure>
+  <figure>
+    <img src="https://c8.alamy.com/comp/F762X6/hindi-film-movie-poster-of-ek-tha-tiger-india-asia-F762X6.jpg">
+  </figure>
+  <figure>
+    <img src="https://d32qys9a6wm9no.cloudfront.net/images/movies/poster/28/96f59966a54829fd4815eb5240b7fdcc_500x735.jpg?t=1489634611.jpg">
+  </figure>
+  <figure>
+    <img src="https://static2.showtimes.com/poster/660x980/padmaavat-hindi-123465.jpg">
+  </figure>
+  <figure>
+    <img src="https://tollywoodicon.com/wp-content/uploads/2019/10/list-of-upcoming-bollywood-movies-posters-of-2018-bollywood-new-movie-download-site-list.jpg">
+  </figure>
+  <figure>
+    <img src="https://m.media-amazon.com/images/M/MV5BMWJkMjJiNzMtNzhmOC00MjQ3LTg5MmEtMTRkMTg1ZjQ2ZmM1L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNDkxMzY0Mjk@._V1_.jpg">
+  </figure>
+  
+</div>
+</div>
+{% endblock %}
