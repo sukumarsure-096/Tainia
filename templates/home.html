@@ -6,31 +6,36 @@
 
 {% endblock %}
 
-
 {% block body_block %}
+
 <div class='mainbody'>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Tainia</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+  
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
       </li>
+      {% if user.is_authenticated %}
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Profile
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <div class="username">
-          {{user.username}}</div>
+            <img src="{{profile.pic.url}}" alt="" width="50px" height="50px">
+          {{user.username}}<br>
+          {{user.email}}</div>
           <a class="dropdown-item" href="{% url 'cp' %}">Change password</a>
           <a class="dropdown-item" href="#">Settings</a>
+          <a class="dropdown-item" href="#">History</a>
           <a class="dropdown-item" href="{% url 'Log_out' %}">Logout</a>
       </li>
+      {% endif %}
       
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -38,6 +43,7 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
+  
 </nav>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -71,13 +77,13 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<h4><a href="{% url 'tm' %}">Telugu Movies</a></h4>
+<h4><a href="{% url 'tm' %}">Telugu Movies<i class="fa fa-angle-right" aria-hidden="true"></i></a></h4>
 <div class="movie">
   <figure>
     <a href="https://www.youtube.com/watch?v=uyiuYfSAc-A">
-    <img src="https://f7b4p3f8.stackpathcdn.com/wp-content/uploads/2020/02/Bheesma-latest-poster.jpg"></a>
+    <img src="https://f7b4p3f8.stackpathcdn.com/wp-content/uploads/2020/02/Bheesma-latest-poster.jpg"> </a>
   </figure>
-  <figure><a href="https://www.youtube.com/watch?v=MPTWp2wCJ-g">
+    <figure><a href="https://www.youtube.com/watch?v=MPTWp2wCJ-g">
     <img src="https://www.telugunestam.com/gallery/events/posters/Nannu%20Dochukunduvate%20Telugu%20Movie%20Posters/69219545Nannu-Dochukunduvate-latest-photos-(2).jpg"></a>
   </figure>
   <figure><a href="https://www.youtube.com/watch?v=z1wzEiCOKnI">
@@ -92,7 +98,7 @@
   <figure> <a href='https://www.youtube.com/watch?v=dzj0FoaUrFE'>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0FWAGT5Vb_gie8WIamnedk5R4lYDlTGvptQ&usqp=CAU.jpg">
   </a></figure>
-  <h4><a href="{% url 'tm' %}">English Movies</a></h4>
+  <h4><a href="{% url 'tm' %}">English Movies<i class="fa fa-angle-right" aria-hidden="true"></i></a></h4>
   <figure>
     <img src="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422.jpg">
   </figure>
@@ -111,7 +117,7 @@
   <figure>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQu89xFC0lL7Vem_5nvT1e3DCVksZ6sGbOm6w&usqp=CAU.jpg">
   </figure>
-  <h4><a href="{% url 'tm' %}">Hindi Movies</a></h4>
+  <h4><a href="{% url 'tm' %}">Hindi Movies<i class="fa fa-angle-right" aria-hidden="true"></i></a></h4>
   <figure>
     <img src="https://static2.showtimes.com/poster/660x980/baahubali-2-the-conclusion-hindi-111259.jpg">
   </figure>
@@ -133,4 +139,7 @@
   
 </div>
 </div>
+
+
+  
 {% endblock %}

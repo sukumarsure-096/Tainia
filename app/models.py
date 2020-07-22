@@ -4,5 +4,5 @@ from django.contrib.auth.models import User
 
 class profile(models.Model):
     user_name = models.OneToOneField(User,on_delete=models.CASCADE)
-    pic = models.ImageField(upload_to='img',null=True)
+    pic = models.ImageField(upload_to='img')
 

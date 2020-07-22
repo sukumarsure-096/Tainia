@@ -33,10 +33,13 @@ def signup(request):
             pro = pf.save(commit=False)
             pro.user_name=user
             pro.save()
+            return HttpResponseRedirect(reverse('home'))
             
     d = {'uf':uf,'pf':pf}
     return render(request,'signup.html',context=d)
-    #return render(request,'h1.html')
+    
+    #return render(request,'signup.html')
+    
 
 def Log_in(request):
     if request.method == 'POST':
@@ -55,14 +58,21 @@ def Log_in(request):
 def Log_out(request):
     logout(request)
     return HttpResponseRedirect(reverse('Log_in'))
-
+'''
 @login_required
 def profile(request):
     username = request.session['username']
     user = User.objects.get(username=username)
-    pro = profile.objects.get(user_name=username)
+    pro = profile.objects.get(user_name=user)
     d = {'user':user,'pro':pro}
     return render(request,'profile.html',context=d)
+'''
+@login_required
+def profiles(request):
+    un = request.session['username']
+    user = User.objects.get(username=un)
+    pfl = profile.objects.get(user_name=user)
+    return render(request,'profile.html',context={'user':user,'profile':pfl})
 
 @login_required
 def cp(request):
